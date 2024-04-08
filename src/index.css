@@ -1,0 +1,11 @@
+ /* css from this page wil be applicable for the whole site
+  means every components, every page.
+  this is the place to declare css globally.
+ */
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
