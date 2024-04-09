@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './components/Layout/Layout';
-import Home from './pages/Home/Home';
+import Signup from './pages/Signup/Signup';
+// import Home from './pages/Home/Home';
 
 
 
@@ -8,7 +9,8 @@ function App() {
 
   return (
         <Layout>
-            <Home></Home>
+            {/* <Home></Home> */}
+            <Signup></Signup>
         </Layout>
          
   )
