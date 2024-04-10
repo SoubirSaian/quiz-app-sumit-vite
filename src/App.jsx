@@ -1,4 +1,5 @@
 import React from 'react';
+import { AuthProvider } from '../src/AuthContext';
 import Layout from './components/Layout/Layout';
 import Signup from './pages/Signup/Signup';
 import Home from './pages/Home/Home';
@@ -14,24 +15,28 @@ function App() {
   return (
       <Router>
 
-        <Layout>
+        <AuthProvider>
 
-          <Switch>
+          <Layout>
 
-            {/* <Home></Home> */}
-            <Route exact path="/" component={Home}></Route>
-            {/* <Signup></Signup> */}
-            <Route exact path="/signup" component={Signup}></Route>
-            {/* <Login></Login> */}
-            <Route exact path="/login" component={Login}></Route>
-            {/* <Quiz></Quiz> */}
-            <Route exact path="/" component={Quiz}></Route>
-            {/* <Result></Result> */}
-            <Route exact path="/result" component={Result}></Route>
+            <Switch>
 
-          </Switch>
+              {/* <Home></Home> */}
+              <Route exact path="/" component={Home}></Route>
+              {/* <Signup></Signup> */}
+              <Route exact path="/signup" component={Signup}></Route>
+              {/* <Login></Login> */}
+              <Route exact path="/login" component={Login}></Route>
+              {/* <Quiz></Quiz> */}
+              <Route exact path="/" component={Quiz}></Route>
+              {/* <Result></Result> */}
+              <Route exact path="/result" component={Result}></Route>
 
-        </Layout>
+            </Switch>
+
+          </Layout>
+
+        </AuthProvider>
 
       </Router>
          
