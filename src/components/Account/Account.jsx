@@ -1,5 +1,6 @@
 import React from 'react';
 import './Account';
+import { Link } from 'react-router-dom';
 
 const Account = () => {
     return (
@@ -8,7 +9,8 @@ const Account = () => {
                 account_circle
             </span>
             {/* <span>{currentUser.displayName}</span> */}
-             <a href="signup.html">Sign Up</a>
+             <Link to="/signup">Sign Up</Link>
+             <Link to="/login">Login</Link>
             
         </div>
          

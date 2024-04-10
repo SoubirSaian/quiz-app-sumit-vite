@@ -5,6 +5,7 @@ import Form from '../../components/Form/Form';
 import Textinput from '../../components/Textinput/Textinput';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import Button from '../../components/Button/Button';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
     return (
@@ -30,7 +31,7 @@ const Signup = () => {
                     </Button>
 
                     <div className='info'>
-                        Already have an account ? <a href="/login.html">login</a> instead
+                        Already have an account ? <Link href="/login">Login</Link> instead
                     </div>
                  </Form>
             </div>
