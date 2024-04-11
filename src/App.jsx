@@ -7,6 +7,8 @@ import Login from './pages/Login/Login';
 import Quiz from './pages/Quiz/Quiz';
 import Result from './pages/Result/Result';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PublicRoute from './components/PublicRoute/PublicRoute';
 
 
 
@@ -24,13 +26,13 @@ function App() {
               {/* <Home></Home> */}
               <Route exact path="/" component={Home}></Route>
               {/* <Signup></Signup> */}
-              <Route exact path="/signup" component={Signup}></Route>
+              <PublicRoute exact path="/signup" component={Signup}></PublicRoute>
               {/* <Login></Login> */}
-              <Route exact path="/login" component={Login}></Route>
+              <PublicRoute exact path="/login" component={Login}></PublicRoute>
               {/* <Quiz></Quiz> */}
-              <Route exact path="/" component={Quiz}></Route>
+              <PrivateRoute exact path="/" component={Quiz}></PrivateRoute>
               {/* <Result></Result> */}
-              <Route exact path="/result" component={Result}></Route>
+              <PrivateRoute exact path="/result" component={Result}></PrivateRoute>
 
             </Switch>
 
